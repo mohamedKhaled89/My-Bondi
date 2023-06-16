@@ -5,11 +5,14 @@
   --yellow-color: #ffc400;
   --section-color: #eff7fa;
 }
-
 body {
   font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
-
 .btn {
   background-color: var(--red-color);
   color: var(--yellow-color);
@@ -58,6 +61,12 @@ body {
   background-color: var(--dark-color);
 }
 
+@media (max-width:450px) {
+  .navbar .container {
+    padding-top: 15px;
+  }
+}
+
 .navbar .nav-item .active {
   color: var(--green-color) !important;
 }
@@ -69,7 +78,7 @@ body {
 .search-field {
   background-color: transparent;
   background-image: url(../imgs/search-solid-white.svg);
-  background-position: 5px center;
+  background-position: 0px center;
   background-repeat: no-repeat;
   background-size: 35px 35px;
   border: none;
@@ -94,9 +103,11 @@ body {
   width: 200px;
   color: #000;
 }
-.text-end button{
+
+.text-end button {
   width: fit-content;
 }
+
 /* End Navbar */
 /* Start Landing */
 #landing {
@@ -201,7 +212,7 @@ body {
 }
 
 .team .col:hover {
-  transform: scale(1.10, 1.10);
+  transform: scale(1.03, 1.03);
   opacity: 1;
 }
 
@@ -217,7 +228,7 @@ body {
 }
 
 .blog .col:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 /* Start Subscribe */
