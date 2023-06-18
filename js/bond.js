@@ -1,3 +1,4 @@
+// Add active class to navbar links
 // Get all buttons with class="btn" inside the container
 var btns = document.getElementsByClassName("nav-link");
 
@@ -10,6 +11,8 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+///////////////////////////////////////////////////////////////////
+// Add active class to our-work taps
 window.myFunction = function (event) {
   // reset all menu items
   document
@@ -21,6 +24,8 @@ window.myFunction = function (event) {
   event.target.classList.add("active");
 };
 
+//////////////////////////////////////////////////////////////////////
+// Button to the top action
 // Get the button
 let mybutton = document.getElementById("myTopBtn");
 
@@ -41,4 +46,15 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// Close open collapsed navbar on clicking outside of the navbar element
+window.onload = function () {
+	document.addEventListener("click", function (event) {
+		// if the clicked element isn't child of the navbar, you must close it if is open
+		if (!event.target.closest("#navbar") && document.getElementById("navbarSupportedContent").classList.contains("show")) {
+			document.getElementById("hamburger_menu_button").click();
+		}
+	});
 }
